@@ -17,7 +17,8 @@ The OTP fully recognizes that Relationship Extraction is a non-trivial problem. 
 Team members should have knowledge of Text Mining, Natural Language Processing and Artificial Intelligence / Machine Learning.
 ## Datasets 
 The datasets will include:
--       NGO reports
--       media articles
--       samples of witness statements
-The OTP will also provide
+* NGO reports
+* media articles
+* samples of witness statements
+
+The OTP will also provide corresponding sample results of the Entities and Relationship extraction process from the above mentioned sources.
