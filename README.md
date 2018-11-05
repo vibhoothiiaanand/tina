@@ -22,3 +22,10 @@ The datasets will include:
 * samples of witness statements
 
 The OTP will also provide corresponding sample results of the Entities and Relationship extraction process from the above mentioned sources.
+
+# Installation 
+
+## For development
+
+* Install Conda. Use the environment file to load all dependencies. 
+ `conda env create -f environment.yaml`
