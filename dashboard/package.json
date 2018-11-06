@@ -34,7 +34,8 @@
     "release:changelog": "npm run conventional-changelog -- -p angular -i CHANGELOG.md -s"
   },
   "dependencies": {
-    "@angular/animations": "6.0.0",
+    "@angular/animations": "^6.0.0",
+    "@angular/cdk": "^7.0.2",
     "@angular/common": "6.0.0",
     "@angular/compiler": "6.0.0",
     "@angular/core": "6.0.0",
@@ -45,7 +46,7 @@
     "@angular/router": "6.0.0",
     "@nebular/auth": "2.0.0-rc.9",
     "@nebular/security": "2.0.0-rc.9",
-    "@nebular/theme": "2.0.0-rc.9",
+    "@nebular/theme": "^2.0.0-rc.9",
     "@ng-bootstrap/ng-bootstrap": "1.0.0",
     "bootstrap": "4.0.0",
     "classlist.js": "1.1.20150312",

@@ -28,8 +28,6 @@ import {
   ThemeSettingsComponent,
   SwitcherComponent,
   LayoutDirectionSwitcherComponent,
-  ThemeSwitcherComponent,
-  ThemeSwitcherListComponent,
 } from './components';
 import { CapitalizePipe, PluralPipe, RoundPipe, TimingPipe } from './pipes';
 import {
@@ -64,8 +62,6 @@ const NB_MODULES = [
 const COMPONENTS = [
   SwitcherComponent,
   LayoutDirectionSwitcherComponent,
-  ThemeSwitcherComponent,
-  ThemeSwitcherListComponent,
   HeaderComponent,
   FooterComponent,
   SearchInputComponent,
@@ -77,7 +73,6 @@ const COMPONENTS = [
 ];
 
 const ENTRY_COMPONENTS = [
-  ThemeSwitcherListComponent,
 ];
 
 const PIPES = [
@@ -90,7 +85,7 @@ const PIPES = [
 const NB_THEME_PROVIDERS = [
   ...NbThemeModule.forRoot(
     {
-      name: 'cosmic',
+      name: 'corporate',
     },
     [ DEFAULT_THEME, COSMIC_THEME, CORPORATE_THEME ],
   ).providers,
