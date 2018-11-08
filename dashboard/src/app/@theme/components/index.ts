@@ -4,3 +4,4 @@ export * from './search-input/search-input.component';
 export * from './theme-settings/theme-settings.component';
 export * from './switcher/switcher.component';
 export * from './layout-direction-switcher/layout-direction-switcher.component'
+
