@@ -29,3 +29,8 @@ The OTP will also provide corresponding sample results of the Entities and Relat
 
 * Install Conda. Use the environment file to load all dependencies. 
  `conda env create -f environment.yaml`
+
+### Setting up Angular environment for development
+
+1) `npm install --save @nebular/theme @angular/cdk @angular/animations` 
+2) `npm start`
