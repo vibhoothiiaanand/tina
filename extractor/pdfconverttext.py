@@ -19,8 +19,8 @@ if text != "":
    text = text
 else:
    text = textract.process(fileurl, method='tesseract', language='eng')
-tokens = word_tokenize(text)
-punctuations = ['(',')',';',':','[',']',',']
-stop_words = stopwords.words('english')
-keywords = [word for word in tokens if not word in stop_words and not word in punctuations]
-print (tokens)
+#tokens = word_tokenize(text)
+#punctuations = ['(',')',';',':','[',']',',']
+#stop_words = stopwords.words('english')
+#keywords = [word for word in tokens if not word in stop_words and not word in punctuations]
+print (text)
