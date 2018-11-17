@@ -1,10 +1,11 @@
 #!/usr/bin/env python
 
 import PyPDF2
+import sys
 import textract
 from nltk.tokenize import word_tokenize
 from nltk.corpus import stopwords
-filename = "02.NGO.INPUT.B.pdf.pdf"
+filename = sys.argv[1] 
 pdfFileObj = open(filename,'rb')
 pdfReader = PyPDF2.PdfFileReader(pdfFileObj)
 num_pages = pdfReader.numPages
