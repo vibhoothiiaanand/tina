@@ -1,21 +1,16 @@
 #!/usr/bin/env python
 
-from urllib.request import urlopen
 import html2text
-
 from bs4 import BeautifulSoup
-
 import requests
-import urllib.request
 
-link = "https://www.architecture.com/FindAnArchitect/FAAPractices.aspx?display=50"
+link = "https://www.aljazeera.com/news/2016/07/iraq-baghdad-bombings-kill-23-160703045945293.html"
+response = requests.get(link).text
 
-html = requests.get(link).text
+w = open("out.txt", "w+")
+h = html2text.HTML2Text()
 
-soup = BeautifulSoup(html, "lxml")
-
-res = soup.findAll("article", {"class": "listingItem"})
-
-for r in res:
-    print(r.find_all("div", {'class': 'pageMeta-item'})[3].text)
+text = h.handle(response)
+w.write(text.encode("utf-8"))
+w.close()
 
