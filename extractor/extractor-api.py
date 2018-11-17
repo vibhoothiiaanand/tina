@@ -19,12 +19,15 @@ for i in os.listdir(input_dir):
     thefile = os.path.join(input_dir, i)
     if i.endswith('.docx'):
         document = Document(thefile)
-        newfile = open(sys.argv[2], 'w')
+        w = open("outdoc.txt", "w")
+        
         newparatextlist = []
+
         for para in document.paragraphs:
             newparatextlist.append(para.text)
-            print(newparatextlist)
-            newfile.write('\n\n'.join(newparatextlist))
+        string = ''.join(str(e) for e in newparatextlist)
+        w.write(string)
+        w.close()
         
     elif i.endswith('.html'):
         html = open(input_dir + '/' + i)
