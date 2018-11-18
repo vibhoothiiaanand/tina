@@ -19,7 +19,7 @@ for i in os.listdir(input_dir):
     if i.endswith('.docx'):
         document = Document(thefile)
         count = 1
-        w = open(str(count) + '.txt', "a")
+        w = open('output.txt', "a")
         
         newparatextlist = []
 
@@ -35,8 +35,8 @@ for i in os.listdir(input_dir):
         html = open(input_dir + '/' + i)
         f = html.read()
             
-        w = open(str(count) + '.txt', "a")
-
+        w = open('output.txt', "a")
+        
         h_parser = html2text.HTML2Text()
 
         h_parser.ingnore_links = True
@@ -59,8 +59,9 @@ for i in os.listdir(input_dir):
         num_pages = pdfReader.numPages
         count = 0
         text = ""
-        w = open(str(count) + '.txt', "a")
-
+        
+        w = open('output.txt', "a")
+        
         while count < num_pages:
             pageObj = pdfReader.getPage(count)
             count +=1
@@ -72,12 +73,3 @@ for i in os.listdir(input_dir):
         count = count + 1
         w.write(text)
         w.close()
-
-
-f = open("bigfile.txt", "w+")
-path = '/home/aniketh/devel/src/miner/extractor'
-files = os.listdir(path)
-for tempfile in files:
-    if i.endswith('.txt'):
-        f.write(tempfile.read())
-
