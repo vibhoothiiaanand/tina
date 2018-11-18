@@ -13,12 +13,12 @@ import html2text
 input_dir = sys.argv[1]
 
 files = []
+title  = "Flag{Title:"
 
 for i in os.listdir(input_dir):
     thefile = os.path.join(input_dir, i)
     if i.endswith('.docx'):
         document = Document(thefile)
-        count = 1
         w = open('output.txt', "a")
         
         newparatextlist = []
@@ -26,12 +26,10 @@ for i in os.listdir(input_dir):
         for para in document.paragraphs:
             newparatextlist.append(para.text)
         string = ''.join(str(e) for e in newparatextlist)
-        count = count + 1
-        w.write(string)
+        w.write(str(title) + str(i) + "}," + str(string))
         w.close()
 
     elif i.endswith('.html'):
-        count = 1
         html = open(input_dir + '/' + i)
         f = html.read()
             
@@ -48,8 +46,7 @@ for i in os.listdir(input_dir):
         text = h_parser.handle(f)
         text = text.strip(' \t\n\r')
         text = text.replace('\\n', '')
-        count = count + 1
-        w.write(text)
+        w.write(str(title) + str(i) + "}," + str(text))
         w.close()
 
     elif i.endswith('.pdf'):
@@ -71,5 +68,5 @@ for i in os.listdir(input_dir):
         else:
             text = textract.process(thefile, method='tesseract', language='eng')
         count = count + 1
-        w.write(text)
+        w.write(str(title) + str(i) + "}," + str(text))
         w.close()
