@@ -30,28 +30,32 @@ export class SmartTableComponent {
       confirmDelete: true,
     },
     columns: {
-      id: {
+      Source: {
+        title: 'Source',
+        type: 'string',
+      },
+      Target: {
+        title: 'Target',
+        type: 'string',
+      },
+      Type: {
+        title: 'Type',
+        type: 'string',
+      },
+      Kind: {
+        title: 'Kind',
+        type: 'string',
+      },
+      ID: {
         title: 'ID',
-        type: 'number',
-      },
-      firstName: {
-        title: 'First Name',
         type: 'string',
       },
-      lastName: {
-        title: 'Last Name',
+      Label: {
+        title: 'Label',
         type: 'string',
       },
-      username: {
-        title: 'Username',
-        type: 'string',
-      },
-      email: {
-        title: 'E-mail',
-        type: 'string',
-      },
-      age: {
-        title: 'Age',
+      Weight: {
+        title: 'Weight',
         type: 'number',
       },
     },
