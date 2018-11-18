@@ -19,7 +19,7 @@ for i in os.listdir(input_dir):
     if i.endswith('.docx'):
         document = Document(thefile)
         count = 1
-        w = open(str(count) + '.txt', "w+")
+        w = open(str(count) + '.txt', "a")
         
         newparatextlist = []
 
@@ -35,7 +35,7 @@ for i in os.listdir(input_dir):
         html = open(input_dir + '/' + i)
         f = html.read()
             
-        w = open(str(count) + '.txt', "w+")
+        w = open(str(count) + '.txt', "a")
 
         h_parser = html2text.HTML2Text()
 
@@ -59,7 +59,7 @@ for i in os.listdir(input_dir):
         num_pages = pdfReader.numPages
         count = 0
         text = ""
-        w = open(str(count) + '.txt', "w+")
+        w = open(str(count) + '.txt', "a")
 
         while count < num_pages:
             pageObj = pdfReader.getPage(count)
