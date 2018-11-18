@@ -10,7 +10,7 @@ import { NbThemeService } from '@nebular/theme';
   styleUrls: ['./bubble-map.component.scss'],
   template: `
     <nb-card>
-    <nb-card-header>Bubble Maps</nb-card-header>
+    <nb-card-header>Heat Map</nb-card-header>
       <nb-card-body>
         <div echarts [options]="options" class="echarts"></div>
       </nb-card-body>
@@ -472,7 +472,7 @@ export class BubbleMapComponent implements OnDestroy {
 
         this.options = {
           title: {
-            text: 'World Population (2011)',
+            text: 'Crime Heat map',
             left: 'center',
             top: 'top',
             textStyle: {

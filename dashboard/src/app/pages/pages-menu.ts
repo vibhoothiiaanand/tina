@@ -8,15 +8,15 @@ export const MENU_ITEMS: NbMenuItem[] = [
     home: true,
   },
   {
-    title: 'Forms',
+    title: 'Upload',
     icon: 'nb-compose',
     children: [
+      // {
+      //   title: 'Form Inputs',
+      //   link: '/pages/forms/inputs',
+      // },
       {
-        title: 'Form Inputs',
-        link: '/pages/forms/inputs',
-      },
-      {
-        title: 'Form Layouts',
+        title: 'Datasets',
         link: '/pages/forms/layouts',
       },
     ],
@@ -25,20 +25,20 @@ export const MENU_ITEMS: NbMenuItem[] = [
     title: 'Maps',
     icon: 'nb-location',
     children: [
+      // {
+      //   title: 'Google Maps',
+      //   link: '/pages/maps/gmaps',
+      // },
+      // {
+      //   title: 'Leaflet Maps',
+      //   link: '/pages/maps/leaflet',
+      // },
       {
-        title: 'Google Maps',
-        link: '/pages/maps/gmaps',
-      },
-      {
-        title: 'Leaflet Maps',
-        link: '/pages/maps/leaflet',
-      },
-      {
-        title: 'Bubble Maps',
+        title: 'Heat Maps',
         link: '/pages/maps/bubble',
       },
       {
-        title: 'Search Maps',
+        title: 'Location Maps',
         link: '/pages/maps/searchmap',
       },
     ],
