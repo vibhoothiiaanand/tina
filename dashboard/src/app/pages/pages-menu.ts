@@ -22,6 +22,16 @@ export const MENU_ITEMS: NbMenuItem[] = [
     ],
   },
   {
+    title: 'Data Representation',
+    icon: 'nb-bar-chart',
+    children: [
+      {
+        title: 'Graphs / charts',
+        link: '/pages/charts/chartjs',
+      },
+    ],
+  },
+  {
     title: 'Maps',
     icon: 'nb-location',
     children: [
