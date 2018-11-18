@@ -32,6 +32,16 @@ export const MENU_ITEMS: NbMenuItem[] = [
     ],
   },
   {
+    title: 'Raw Data',
+    icon: 'nb-tables',
+    children: [
+      {
+        title: 'CSV Table',
+        link: '/pages/tables/smart-table',
+      },
+    ],
+  },
+  {
     title: 'Maps',
     icon: 'nb-location',
     children: [
