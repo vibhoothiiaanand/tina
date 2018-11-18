@@ -11,7 +11,6 @@ from importlib import reload
 import html2text
 
 input_dir = sys.argv[1]
-output_file = sys.argv[2]
 
 files = []
 
@@ -19,21 +18,24 @@ for i in os.listdir(input_dir):
     thefile = os.path.join(input_dir, i)
     if i.endswith('.docx'):
         document = Document(thefile)
-        w = open("outdoc.txt", "w")
+        count = 1
+        w = open(str(count) + '.txt', "w+")
         
         newparatextlist = []
 
         for para in document.paragraphs:
             newparatextlist.append(para.text)
         string = ''.join(str(e) for e in newparatextlist)
+        count = count + 1
         w.write(string)
         w.close()
-        
+
     elif i.endswith('.html'):
+        count = 1
         html = open(input_dir + '/' + i)
         f = html.read()
             
-        w = open("outp.txt", "w")
+        w = open(str(count) + '.txt', "w+")
 
         h_parser = html2text.HTML2Text()
 
@@ -46,16 +48,18 @@ for i in os.listdir(input_dir):
         text = h_parser.handle(f)
         text = text.strip(' \t\n\r')
         text = text.replace('\\n', '')
+        count = count + 1
         w.write(text)
         w.close()
 
     elif i.endswith('.pdf'):
+        count = 1
         pdfFileObj = open(thefile,'rb')
         pdfReader = PyPDF2.PdfFileReader(pdfFileObj)
         num_pages = pdfReader.numPages
         count = 0
         text = ""
-        w = open("outpdf.txt", "w")
+        w = open(str(count) + '.txt', "w+")
 
         while count < num_pages:
             pageObj = pdfReader.getPage(count)
@@ -65,5 +69,15 @@ for i in os.listdir(input_dir):
             text = text
         else:
             text = textract.process(thefile, method='tesseract', language='eng')
+        count = count + 1
         w.write(text)
         w.close()
+
+
+f = open("bigfile.txt", "w+")
+path = '/home/aniketh/devel/src/miner/extractor'
+files = os.listdir(path)
+for tempfile in files:
+    if i.endswith('.txt'):
+        f.write(tempfile.read())
+
