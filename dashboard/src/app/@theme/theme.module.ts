@@ -17,6 +17,7 @@ import {
   NbCheckboxModule,
   NbPopoverModule,
   NbContextMenuModule,
+  NbProgressBarModule,
 } from '@nebular/theme';
 
 import { NbSecurityModule } from '@nebular/security';
@@ -28,8 +29,17 @@ import {
   ThemeSettingsComponent,
   SwitcherComponent,
   LayoutDirectionSwitcherComponent,
+  ThemeSwitcherComponent,
+  TinyMCEComponent,
+  ThemeSwitcherListComponent,
 } from './components';
-import { CapitalizePipe, PluralPipe, RoundPipe, TimingPipe } from './pipes';
+import {
+  CapitalizePipe,
+  PluralPipe,
+  RoundPipe,
+  TimingPipe,
+  NumberWithCommasPipe,
+} from './pipes';
 import {
   OneColumnLayoutComponent,
   SampleLayoutComponent,
@@ -56,16 +66,20 @@ const NB_MODULES = [
   NbPopoverModule,
   NbContextMenuModule,
   NgbModule,
-  NbSecurityModule, // *nbIsGranted directive
+  NbSecurityModule, // *nbIsGranted directive,
+  NbProgressBarModule,
 ];
 
 const COMPONENTS = [
   SwitcherComponent,
   LayoutDirectionSwitcherComponent,
+  ThemeSwitcherComponent,
+  ThemeSwitcherListComponent,
   HeaderComponent,
   FooterComponent,
   SearchInputComponent,
   ThemeSettingsComponent,
+  TinyMCEComponent,
   OneColumnLayoutComponent,
   SampleLayoutComponent,
   ThreeColumnsLayoutComponent,
@@ -73,6 +87,7 @@ const COMPONENTS = [
 ];
 
 const ENTRY_COMPONENTS = [
+  ThemeSwitcherListComponent,
 ];
 
 const PIPES = [
@@ -80,6 +95,7 @@ const PIPES = [
   PluralPipe,
   RoundPipe,
   TimingPipe,
+  NumberWithCommasPipe,
 ];
 
 const NB_THEME_PROVIDERS = [
