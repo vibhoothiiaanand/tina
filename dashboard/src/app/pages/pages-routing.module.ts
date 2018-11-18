@@ -12,7 +12,13 @@ const routes: Routes = [{
   children: [{
     path: 'dashboard',
     component: DashboardComponent,
-	}],
+  }, {
+    path: 'forms',
+    loadChildren: './forms/forms.module#FormsModule',
+  }, {
+    path: 'maps',
+    loadChildren: './maps/maps.module#MapsModule',
+  }],
 }];
 
 @NgModule({
