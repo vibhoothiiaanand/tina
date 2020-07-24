@@ -34,3 +34,7 @@ The OTP will also provide corresponding sample results of the Entities and Relat
 
 1) `npm install --save @nebular/theme @angular/cdk @angular/animations` 
 2) `npm start`
+
+# Presentation
+
+Check [slides](slides/05amFOSS.pdf)
